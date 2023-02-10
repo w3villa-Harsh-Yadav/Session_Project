@@ -1,9 +1,22 @@
 body{
-    overflow: hidden;
+    overflow-x: hidden;
+    height: 1600px;
 }
 
 /* Header classes */
-.container,.ul-list{
+header .container .logo .box{
+    background-color: #4A8DD2;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -8px -4px 2px 2px #4a8ed229, 8px 4px 2px 2px #4a8ed229;
+}
+header .container,.ul-list{
     display: flex;
     justify-content: space-around;
 }
@@ -32,12 +45,14 @@ body{
     margin-top: 2px;
     color: white;
 }
-
+.logo{
+    margin-right: 270px;
+}
 /* Hero Classes */
 
 .hero{
     display: inline-block;
-    margin-left: 308px;
+    margin-left: 246px;
     margin-top: 100px;
     position: relative;
 }
@@ -51,7 +66,7 @@ body{
     font-size: 30px;
     color: rgb(160, 159, 159);
 }
-.hero .button-input .input input{
+.hero .button-input .input input,.aside-content .button-input .input input{
     border-radius: 90px;
     padding: 10px 30px;
     font-size: 20px;
@@ -60,22 +75,26 @@ body{
 .input input:focus{
     outline: none;
 }
-.hero .button-input{
+.hero .button-input,.aside-content .button-input{
     position: relative;
     top: 90px;
+    width: fit-content;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px 10px #f1f1f1;
 }
-.hero .input .button{
+.hero .input .button,.aside-content .input .button{
     position: absolute;
     bottom: 1.5px;
-    left: 250px;
+    left: 278px;
 }
-.hero .input .button button{
+.hero .input .button button,.aside-content .input .button button{
     border-radius: 20px;
     padding: 7px 15px;
-    background-color: rgb(17, 134, 173);
+    background-color:  hsl(204deg 100% 40%);
     color: white;
     font-size: 20px;
     font-weight: bolder;
+    border: unset;
 }
 .hero .input .button button:focus{
     outline: none;
@@ -95,7 +114,88 @@ body{
 }
 
 
-
-
-
+/* Grid classes */
+.grid-cont{
+    position: relative;
+}
+.grid{
+    display: inline-grid;
+    grid-template-columns: 250px 250px 0px;
+    grid-template-rows: 300px 250px;
+    gap: 20px;
+    position: absolute;
+    top: 200px;
+    left: 208px;
+}
+.grid-cont .grid  .one,.grid-cont .grid  .two{
+    text-align: center;
+    
+    overflow: hidden;
+}
+.grid-cont .grid  .three{
+    grid-column: 1/3;
+    text-align: center;
+    overflow: hidden;
+}
+.grid-cont .grid  .one img,.grid-cont .grid .two img{
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.grid-cont .grid  .three img{
+    width: 510px;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.hoverclass{
+    display: none;
+    height: 300px;
+    width: 250px;
+    font-weight: bolder;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    font-size: 30px;
+}
+.grid-cont .grid .one,.grid-cont .grid .two,.grid-cont .grid .three{
+    position: relative;
+}
+.grid-cont .grid .one:hover .hoverclass,.grid-cont .grid .two:hover .hoverclass{
+    display: block;
+    color: white;
+    margin-top: 140px;
+}
+.effect:hover{
+    transition: all .5s;
+    transform: scale(1.1);
+}
+.grid-cont .grid .three:hover .hoverclass{
+    display: block;
+    color: white;
+    margin: 110px 140px;
+}
+/* Aside Footer classes */
+.aside-content{
+    position: absolute;
+    display: inline-block;
+    right: 250px;
+    top: 986px;
+}
+.aside-content .heading p{
+    text-transform:capitalize;
+    font-weight: bolder;
+    font-size: 40px;
+}
+.aside-content .para p{
+    color: rgb(105, 104, 104);
+    font-size: 20px;
+}  
+/* Aside button properties */
+.aside-content .button-input{
+    top: 50px;
+}
 
